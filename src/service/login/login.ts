@@ -2,7 +2,7 @@ import hyRequest from '../index'
 import { IAccount, ILoginResult } from './type'
 import { IDataType } from '../types'
 enum LoginAPI {
-  AccountLogin = '/login',
+  AccountLogin = '/login/',
   LoginUserInfo = '/users/',
   UserMenus = '/role/' // 用法: role/1/menu
 }
