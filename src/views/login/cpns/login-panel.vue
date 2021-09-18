@@ -22,6 +22,10 @@
     <el-button type="primary" class="login-btn" @click="handleLoginClick"
       >立即登录</el-button
     >
+    <div class="pass">
+      <div>账号:coderwhy</div>
+      <div>密码:123456</div>
+    </div>
   </div>
 </template>
 
@@ -73,6 +77,11 @@ export default defineComponent({
   justify-content: space-between;
   margin-top: 5px;
 }
+.pass {
+  display: flex;
+  justify-content: space-between;
+}
+
 .login-btn {
   width: 100%;
   margin-top: 10px;

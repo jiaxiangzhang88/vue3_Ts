@@ -15,13 +15,14 @@ export function mapMenusToRoutes(userMenus: any[]): RouteRecordRaw[] {
   //2.根据菜单获取需要添加的rotes
   //userMenus
   //type ===1 -> children -> type ===1
-  //type ===2 -> uel -> route
+  //type ===2 -> url -> route
   const _recurseGetRoute = (menus: any[]) => {
     for (const menu of menus) {
       if (menu.type === 2) {
         const route = allRoutes.find(
           (route: RouteRecordRaw) => route.path === menu.url
         )
+        // console.log(route?.path)
         if (route) routes.push(route)
         if (!firstMenu) {
           firstMenu = menu
