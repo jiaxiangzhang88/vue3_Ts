@@ -36,7 +36,6 @@ const loginModule: Module<ILoginState, IRootState> = {
       routes.forEach((route) => {
         router.addRoute('main', route)
       })
-
       //获取用户按钮权限
       const permissions = mapMenusToPermissions(userMenus)
       state.permissions = permissions
@@ -49,7 +48,6 @@ const loginModule: Module<ILoginState, IRootState> = {
       const { id, token } = loginResult.data
       commit('changeToken', token)
       localCache.setCache('token', token)
-
       // 发送初始化的请求(完整的role/department)
       dispatch('getInitialDataAction', null, { root: true })
       // 2.请求用户信息
